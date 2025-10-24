@@ -17,7 +17,7 @@ public class Main {
 		        System.out.println("Last element: " + myArray[myArray.length - 1]);
 		        
 		        // 4. Print out the element in the array at position 6, what happens?
-		        // This will cause an ArrayIndexOutOfBoundsException since array has indices 0-5
+		        // This will cause an ArrayIndexOutOfBoundsException since array has 0-5
 		        // System.out.println("Element at position 6: " + myArray[6]);
 		        System.out.println("Position 6 would cause ArrayIndexOutOfBoundsException");
 		        
@@ -229,8 +229,4 @@ public class Main {
 		        
 		        return true;
 		    }
-		
-
 	}
-
-
