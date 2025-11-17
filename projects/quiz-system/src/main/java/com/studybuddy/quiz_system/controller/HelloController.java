@@ -1,4 +1,4 @@
-package com.studybuddy.quiz_system;
+package com.studybuddy.quiz_system.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

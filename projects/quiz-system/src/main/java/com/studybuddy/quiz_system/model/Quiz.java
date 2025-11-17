@@ -1,5 +1,7 @@
-package com.studybuddy.quiz_system;
+package com.studybuddy.quiz_system.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -22,6 +24,9 @@ public class Quiz {
     
     @Column(name = "created_date")
     private LocalDateTime createdDate;
+    
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Question> questions = new ArrayList<>();
     
     // Constructor
     public Quiz() {
@@ -67,5 +72,13 @@ public class Quiz {
     
     public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
+    }
+    
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
     }
 }
